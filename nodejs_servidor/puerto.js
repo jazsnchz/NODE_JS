@@ -1,11 +1,14 @@
-//creacion del modulo
-var http = require("http");
+ var http = require("http");
 
-//creo la funcion e indico el puerto donde voy a escuchar la respuesta 
-http.createServer(function (req, res) {
-   res.writeHead(200, {'Content-Type': 'text/plain'});
-   res.end('Hello World\n');
+http.createServer(function (request, response) {
+   // Send the HTTP header 
+   // HTTP Status: 200 : OK
+   // Content Type: text/plain
+   response.writeHead(200, {'Content-Type': 'text/plain'});
+   
+   // Send the response body as "Hello World"
+   response.end('Hello World\n');
 }).listen(8081);
 
-// Imprimimos un mensaje en consola
-console.log('Server running at http://127.0.0.1:8081/');
+// Console will print the message
+console.log('Server running at http://127.0.0.1:8081/'); 

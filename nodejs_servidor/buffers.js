@@ -1,7 +1,7 @@
 buf = new Buffer(256);
-len = buf.write("Simply Easy Learning");
+len = buf.write("POO");
 
-console.log("Octets written : "+  len)
+console.log("octetos : "+  len)
 
 
 
@@ -12,3 +12,8 @@ for (var i = 0 ; i < 26 ; i++) {
 
 console.log( buf.toString('ascii'));    
 console.log( buf.toString('ascii',0,5));
+
+//concatenacion de buffers
+var buffer1 = new Buffer('Hola a todos');
+var buffer2 = new Buffer('como estan ?');
+var buffer3 = Buffer.concat([buffer1,buffer2]);
